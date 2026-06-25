@@ -1,0 +1,5 @@
+# Allow these native packages to run their install/build scripts.
+# sharp powers Next.js image optimization; unrs-resolver backs ESLint's resolver.
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
