@@ -134,7 +134,7 @@ export function Hero() {
                     </h1>
 
                     <p data-hero-fade className='reveal mt-7 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg'>
-                        I&apos;m {SITE.name.split(' ')[0]}, a {SITE.role.toLowerCase()} who turns ideas into fast, accessible, and delightfully interfaces.
+                        I&apos;m {SITE.name.split(' ')[0]}, a {SITE.role.toLowerCase()} who turns ideas into fast, accessible, and delightful interfaces.
                         Currently based in {SITE.location}.
                     </p>
 

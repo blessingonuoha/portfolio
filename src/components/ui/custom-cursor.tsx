@@ -1,7 +1,26 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useSyncExternalStore } from "react";
 import { gsap } from "gsap";
+
+const FINE_POINTER = "(pointer: fine)";
+const REDUCED_MOTION = "(prefers-reduced-motion: reduce)";
+
+// The custom cursor only applies to fine-pointer, no-reduced-motion users. Media
+// queries are an external store, so subscribe to them — this also flips live if
+// the user plugs in a mouse or toggles reduced motion. SSR snapshot is false.
+function subscribeMedia(onChange: () => void) {
+  const queries = [window.matchMedia(FINE_POINTER), window.matchMedia(REDUCED_MOTION)];
+  queries.forEach((q) => q.addEventListener("change", onChange));
+  return () => queries.forEach((q) => q.removeEventListener("change", onChange));
+}
+
+function getCursorEnabled() {
+  return (
+    window.matchMedia(FINE_POINTER).matches &&
+    !window.matchMedia(REDUCED_MOTION).matches
+  );
+}
 
 /**
  * Two-part custom cursor: a crisp dot that tracks instantly and a ring that
@@ -12,16 +31,9 @@ import { gsap } from "gsap";
  * keep the native cursor, and the native cursor is only hidden while this runs.
  */
 export function CustomCursor() {
-  const [enabled, setEnabled] = useState(false);
+  const enabled = useSyncExternalStore(subscribeMedia, getCursorEnabled, () => false);
   const dot = useRef<HTMLDivElement>(null);
   const ring = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const finePointer = window.matchMedia("(pointer: fine)").matches;
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!finePointer || reduced) return;
-    setEnabled(true);
-  }, []);
 
   useEffect(() => {
     if (!enabled) return;
