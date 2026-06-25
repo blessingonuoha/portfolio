@@ -113,12 +113,6 @@
     color: #fff;
   }
 
-  /* Hide native cursor only while the custom cursor is mounted (fine pointer). */
-  .cursor-none,
-  .cursor-none * {
-    cursor: none !important;
-  }
-
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 10px;

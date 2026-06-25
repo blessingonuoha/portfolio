@@ -1,10 +1,11 @@
-import { ArrowUpRight, Copy } from "lucide-react";
+import { ArrowUpRight, CalendarDays, Copy } from "lucide-react";
 import { Reveal } from "@/components/animations/reveal";
 import { AnimatedHeading } from "@/components/animations/animated-heading";
 import { Magnetic } from "@/components/animations/magnetic";
 import { Button } from "@/components/ui/button";
 import { SITE, SOCIALS } from "@/lib/content";
 import { CopyEmailButton } from "@/components/sections/copy-email-button";
+import { CalendlyButton } from "@/components/sections/calendly-button";
 
 export function Contact() {
   return (
@@ -37,16 +38,30 @@ export function Contact() {
 
             <Reveal
               delay={0.15}
-              className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
+              className="mt-9 flex flex-col items-center justify-center gap-3"
             >
-              <Magnetic className="w-full sm:w-auto">
-                <Button asChild size="lg" className="group w-full rounded-full sm:w-auto">
-                  <a href={`mailto:${SITE.email}`}>
-                    Start a conversation
-                    <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </a>
-                </Button>
-              </Magnetic>
+              <div className="flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row">
+                <Magnetic className="w-full sm:w-auto">
+                  <Button asChild size="lg" className="group w-full rounded-full sm:w-auto">
+                    <a href={`mailto:${SITE.email}`}>
+                      Start a conversation
+                      <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </a>
+                  </Button>
+                </Magnetic>
+
+                <Magnetic className="w-full sm:w-auto">
+                  <CalendlyButton
+                    url={SITE.calendly}
+                    variant="outline"
+                    size="lg"
+                    className="w-full rounded-full sm:w-auto"
+                  >
+                    <CalendarDays className="size-4" aria-hidden="true" />
+                    Schedule a call
+                  </CalendlyButton>
+                </Magnetic>
+              </div>
 
               <CopyEmailButton email={SITE.email}>
                 <span className="font-mono text-sm">{SITE.email}</span>

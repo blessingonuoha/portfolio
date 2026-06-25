@@ -1,14 +1,15 @@
 'use client';
 
 import { useRef, useSyncExternalStore } from 'react';
-import { ArrowUpRight, Sparkles } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { SITE, STATS } from '@/lib/content';
+import { SITE, SOCIALS, STATS } from '@/lib/content';
 import { Button } from '@/components/ui/button';
 import { AnimatedHeading } from '@/components/animations/animated-heading';
 import { Magnetic } from '@/components/animations/magnetic';
 import { INTRO_EVENT, isIntroDone } from '@/lib/intro';
+import { Reveal } from '../animations/reveal';
 
 gsap.registerPlugin(useGSAP);
 
@@ -114,10 +115,18 @@ export function Hero() {
                 <div className='mx-auto w-full max-w-6xl px-5 sm:px-8'>
                     <span
                         data-hero-fade
-                        className='reveal inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur'
+                        className='reveal inline-flex items-center gap-2.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-300 shadow-[0_0_24px_-6px_rgba(16,185,129,0.5)] backdrop-blur'
                     >
-                        <Sparkles className='size-3.5 text-primary' aria-hidden='true' />
-                        Available for freelance, contract &amp; full-time
+                        {/* Pulsing "live" status dot. */}
+                        <span className='relative flex size-2' aria-hidden='true'>
+                            <span className='absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75' />
+                            <span className='relative inline-flex size-2 rounded-full bg-emerald-400' />
+                        </span>
+                        Currently available
+                        <span className='text-emerald-400/40' aria-hidden='true'>
+                            ·
+                        </span>
+                        <span className='font-normal text-emerald-200/80'>freelance, contract &amp; full-time</span>
                     </span>
 
                     <h1 className='mt-6 max-w-4xl font-display text-[clamp(2.75rem,8vw,6rem)] font-bold leading-[0.95] tracking-tight'>
@@ -135,6 +144,7 @@ export function Hero() {
 
                     <p data-hero-fade className='reveal mt-7 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg'>
                         I&apos;m {SITE.name.split(' ')[0]}, a {SITE.role.toLowerCase()} who turns ideas into fast, accessible, and delightful interfaces.
+                        <br />
                         Currently based in {SITE.location}.
                     </p>
 
@@ -152,6 +162,23 @@ export function Hero() {
                                 <a href='#contact'>Get in touch</a>
                             </Button>
                         </Magnetic>
+                    </div>
+                    <div className='mt-3 flex items-center gap-2'>
+                        {SOCIALS.map((social) => {
+                            const Icon = social.icon;
+                            return (
+                                <a
+                                    key={social.label}
+                                    href={social.href}
+                                    target={social.href.startsWith('http') ? '_blank' : undefined}
+                                    rel={social.href.startsWith('http') ? 'noreferrer' : undefined}
+                                    aria-label={social.label}
+                                    className='inline-flex size-8 items-center justify-center  text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'
+                                >
+                                    <Icon className='size-4' aria-hidden='true' />
+                                </a>
+                            );
+                        })}
                     </div>
 
                     {/* Stats */}

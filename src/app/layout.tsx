@@ -3,7 +3,7 @@ import { Space_Grotesk, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Preloader } from "@/components/sections/preloader";
 import { SmoothScroll } from "@/components/providers/smooth-scroll";
-import { CustomCursor } from "@/components/ui/custom-cursor";
+import { FloatingContactButton } from "@/components/sections/floating-contact-button";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -83,9 +83,9 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Preloader />
         <SmoothScroll />
-        <CustomCursor />
         <div className="grain" aria-hidden />
         {children}
+        <FloatingContactButton />
       </body>
     </html>
   );

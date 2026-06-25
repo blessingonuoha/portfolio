@@ -8,8 +8,10 @@ export const SITE = {
     name: 'Blessing Onuoha',
     role: 'Frontend & Web3 Engineer',
     email: 'blessingonuoha.dev@gmail.com',
-    location: 'Imo State, NG · Remote',
+    location: 'Nigeria · Open to Remote',
     tagline: 'I build fast, accessible products for the web and web3.',
+    calendly: 'https://calendly.com/blessingonuoha/one-on-one-meeting',
+    resume: '/blessing-onuoha-resume.pdf',
 };
 
 export type GalleryPhoto = { src: string; alt: string };
@@ -50,8 +52,9 @@ export type Stat = { value: string; label: string };
 
 export const STATS: Stat[] = [
     { value: '3+', label: 'Years building' },
+    { value: '25+', label: 'Products shipped' },
     { value: '75%', label: 'User growth driven' },
-    { value: '98%', label: 'Vulns reduced' },
+    { value: '98%', label: 'Contract vulns cut' },
 ];
 
 export type Project = {
