@@ -122,11 +122,8 @@ export function Hero() {
                             <span className='absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75' />
                             <span className='relative inline-flex size-2 rounded-full bg-emerald-400' />
                         </span>
-                        Currently available
-                        <span className='text-emerald-400/40' aria-hidden='true'>
-                            ·
-                        </span>
-                        <span className='font-normal text-emerald-200/80'>freelance, contract &amp; full-time</span>
+
+                        <span className='font-normal text-emerald-200/80'>Currently available for work</span>
                     </span>
 
                     <h1 className='mt-6 max-w-4xl font-display text-[clamp(2.75rem,8vw,6rem)] font-bold leading-[0.95] tracking-tight'>
