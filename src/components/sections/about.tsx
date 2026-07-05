@@ -13,8 +13,8 @@ export function About() {
                     </div>
 
                     <div className='lg:col-span-7 space-y-5 text-base leading-relaxed sm:text-xl'>
-                        <ScrollFillText text="I'm a frontend and web3 engineer based in Nigeria. For the past three years I've helped startups across fintech, real estate, social audio, and talent, ship production softwares — from studio-booking systems and recruitment platforms to NFT marketplaces." />
-                        <ScrollFillText text="I've led frontend teams on concurrent products, shipped feature-rich MVPs, and audited critical smart contracts to a 98% reduction in vulnerabilities. I care about clean interface contracts, reusable components, and code that's fast and accessible by default." />
+                        <ScrollFillText text="I am a frontend and web3 engineer based in Nigeria. For the past three years I've helped startups across fintech, real estate, social audio, and talent, ship production softwares — from studio-booking systems and recruitment platforms to NFT marketplaces." />
+                        <ScrollFillText text="I have led frontend teams on concurrent products, shipped feature-rich MVPs, and audited critical smart contracts to a 98% reduction in vulnerabilities. I care about clean interface contracts, reusable components, and code that's fast and accessible by default." />
                     </div>
                 </div>
 

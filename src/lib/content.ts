@@ -11,7 +11,7 @@ export const SITE = {
     location: 'Nigeria · Open to Remote',
     tagline: 'I build fast, accessible products for the web and web3.',
     calendly: 'https://calendly.com/blessingonuoha/one-on-one-meeting',
-    resume: '/blessing-onuoha-resume.pdf',
+    resume: '/001_BLESSING_ONUOHA_RESUME.pdf',
 };
 
 export type GalleryPhoto = { src: string; alt: string };
