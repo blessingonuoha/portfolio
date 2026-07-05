@@ -94,10 +94,10 @@ export const PROJECTS: Project[] = [
         accent: 'from-emerald-500/30 via-teal-500/20 to-transparent',
     },
     {
-        title: 'Nestrova',
+        title: 'Nestrovar',
         category: 'Recruitment Platform',
         description:
-            'Led frontend for a talent–employer matching platform for African tech talent — reusable profiles, AI-driven shortlisting, and employer dashboards that cut hiring from weeks to hours.',
+            'Led frontend for a talent–employer matching platform for African tech talent — standardized candidate profiles, AI-driven shortlisting, and employer dashboards that cut hiring from weeks to hours.',
         year: '2025',
         tags: ['Next.js', 'Zustand', 'TanStack Query', 'OAuth'],
         href: 'https://www.nestrovar.com/',
@@ -133,7 +133,7 @@ export const PROJECTS: Project[] = [
             "Led frontend for a property-rental platform serving landlords, tenants, and agents — maps, listings, and payments tailored to Nigeria's real-estate market.",
         year: '2025',
         tags: ['Next.js', 'Google Maps API', 'Paystack', 'Zod'],
-        href: 'https://dev.duerents.deveote.com',
+        href: 'https://duerents.com',
         images: ['/projects/duerents-1.webp', '/projects/duerents-2.webp', '/projects/duerents-3.webp', '/projects/duerents-4.webp'],
         accent: 'from-amber-500/30 via-orange-500/20 to-transparent',
     },
@@ -156,10 +156,11 @@ export const PROJECTS: Project[] = [
     },
     {
         title: 'Revlot',
-        category: 'Frontend Build',
-        description: 'Frontend engineering for Revlot, built on a modern Next.js 15 + React 19 stack with Radix UI and a focus on fast, accessible interfaces.',
+        category: 'Car Auction · Frontend',
+        description:
+            "Frontend engineering for Nigeria's first fully digital, escrow-protected car auction platform — built on a modern Next.js 15 + React 19 stack with Radix UI and a focus on fast, accessible interfaces.",
         year: '2024',
-        tags: ['Next.js', 'React 19', 'Radix UI', 'Turbopack'],
+        tags: ['Next.js', 'React 19', 'Radix UI', 'shadcn/ui'],
         href: 'https://revlot.co',
         images: ['/projects/revlot-1.webp', '/projects/revlot-2.webp', '/projects/revlot-3.webp'],
         accent: 'from-rose-500/30 via-red-500/20 to-transparent',
@@ -199,7 +200,11 @@ export const SKILL_GROUPS: SkillGroup[] = [
     },
     {
         title: 'Tooling & Practice',
-        items: ['Git', 'ESLint', 'Turbopack', 'PostHog', 'AWS CodeBuild', 'Resend', 'Unit Testing', 'SCRUM'],
+        items: ['Git', 'ESLint', 'Turbopack', 'PostHog', 'Google Analytics', 'AWS CodeBuild', 'Resend', 'SCRUM'],
+    },
+    {
+        title: 'Testing',
+        items: ['Playwright', 'Cypress', 'Jest'],
     },
 ];
 
