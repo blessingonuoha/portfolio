@@ -10,7 +10,7 @@ export const SITE = {
     email: 'blessingonuoha.dev@gmail.com',
     location: 'Nigeria · Open to Remote',
     tagline: 'I build fast, accessible products for the web and web3.',
-    calendly: 'https://calendly.com/blessingonuoha/one-on-one-meeting',
+    calendly: 'https://calendly.com/blessing_devhub/one-on-one-meeting',
     resume: '/001_BLESSING_ONUOHA_RESUME.pdf',
 };
 

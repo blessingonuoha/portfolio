@@ -4,6 +4,7 @@ import "./globals.css";
 import { Preloader } from "@/components/sections/preloader";
 import { SmoothScroll } from "@/components/providers/smooth-scroll";
 import { FloatingContactButton } from "@/components/sections/floating-contact-button";
+import { Analytics } from "@vercel/analytics/next";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -86,6 +87,7 @@ export default function RootLayout({
         <div className="grain" aria-hidden />
         {children}
         <FloatingContactButton />
+        <Analytics />
       </body>
     </html>
   );
