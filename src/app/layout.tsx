@@ -26,8 +26,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-// TODO: set this to your live domain once deployed.
-const siteUrl = "https://blessingonuoha.dev";
+const siteUrl = "https://portfolio.blessingonuoha.dev";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

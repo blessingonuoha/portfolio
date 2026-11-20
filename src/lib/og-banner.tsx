@@ -60,7 +60,7 @@ async function loadPortrait(): Promise<string | null> {
 
 export default async function Image() {
   const headingText = `${SITE.name}${SITE.role}`;
-  const bodyText = `${SITE.tagline}Currently available for workblessingonuoha.devReact · Next.js · TypeScript · Solidity`;
+  const bodyText = `${SITE.tagline}Currently available for workportfolio.blessingonuoha.devReact · Next.js · TypeScript · Solidity`;
 
   const [grotesk, inter, portrait] = await Promise.all([
     loadGoogleFont("Space Grotesk", 700, headingText),
@@ -221,7 +221,7 @@ export default async function Image() {
         >
           <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
             <div style={{ width: 12, height: 12, borderRadius: 3, background: VIOLET }} />
-            <span style={{ color: FG }}>blessingonuoha.dev</span>
+            <span style={{ color: FG }}>portfolio.blessingonuoha.dev</span>
           </div>
           <div style={{ display: "flex", color: "#d4d4d8" }}>
             React · Next.js · TypeScript · Solidity
